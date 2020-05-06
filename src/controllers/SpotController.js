@@ -1,5 +1,5 @@
-const Spot = require('../models/Spot');
 const User = require('../models/User');
+const Spot = require('../models/Spot');
 
 module.exports = {
   // index method = Creates a method of session list.

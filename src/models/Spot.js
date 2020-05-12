@@ -11,7 +11,8 @@ const SpotSchema = new mongoose.Schema({
     ref: 'User'
   }
 }, {
-  // Everytime that a spot in converted into JSON I need it calculete the virtual automatically.
+  // Everytime that a spot in converted into JSON it need to calculete the virtual automatically.
+  // Doing that the frontend can use the image send by the user.
   toJSON: {
     virtuals: true,
   }
@@ -20,6 +21,6 @@ const SpotSchema = new mongoose.Schema({
 // To get the img in the frontend cos' the the backend gets only the name of the img.
 SpotSchema.virtual('thumbnail_url').get(function() {
   return `http://localhost:3333/files/${this.thumbnail}`
-})
+});
 
 module.exports = mongoose.model('Spot', SpotSchema);

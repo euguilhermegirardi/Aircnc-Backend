@@ -15,7 +15,9 @@ This is a project where I could learn many professional techniques that is used 
 The backend was developed with [**_Node.js_**](https://nodejs.org/en/) and [**_Express.js_**](https://expressjs.com/) ( _framework_ ) using MVC as a design pattern. The application is based on a server which is the [**_MongoDB Atlas_**](https://www.mongodb.com/cloud/atlas).
 The REST API was tested using [**_Insomnia_**](https://insomnia.rest/) and I also used [**_Mongoose_**](https://mongoosejs.com/), a library that facilitates the work with **_MongoDB_**.
 
-    Here goes the two images (Insomnia and VSCode)
+![insomnia](src/assets/insomnia.png)
+
+![server.js](src/assets/server.png)
 
 ## Getting started
 
@@ -33,14 +35,13 @@ The REST API was tested using [**_Insomnia_**](https://insomnia.rest/) and I als
 
 3. Install NPM packages
 
-       npm install
+   npm install
 
 4. Run the application
 
-       npm run dev
-       
+   npm run dev
 
-   here goes the package.json / terminal image
+here goes the package.json / terminal image
 
 ## Contributing
 

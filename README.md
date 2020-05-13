@@ -43,7 +43,8 @@ The REST API was tested using [**_Insomnia_**](https://insomnia.rest/) and I als
 
    npm run dev
 
-here goes the package.json / terminal image
+**package.json/server-running**
+![server.js](src/assets/packagejson.png)
 
 ## Contributing
 

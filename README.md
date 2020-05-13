@@ -5,10 +5,10 @@ This is a project where I could learn many professional techniques that is used 
 
 ## About the project
 
-The **Aircnc** is an application where a company can share a spot inside of your building to other developers to use it daily.
-The **_company_** access the website to register a spot saying the company's name, which technology they use and the price.
-The **_user_** access the app to search for a spot. He/She enter with an email and which technologies they work with and then they are send to another page where they can find some spots and request a date.
-The **_company_** receives this request in real-time and can accept or decline it sending the answer also in real-time to the **_user_**.
+- The **Aircnc** is an application where a company can share a spot inside of your building to other developers to use it daily.
+- The **_company_** access the website to register a spot saying the company's name, which technology they use and the price.
+- The **_user_** access the app to search for a spot. He/She enter with an email and which technologies they work with and then they are send to another page where they can find some spots and request a date.
+- The **_company_** receives this request in real-time and can accept or decline it sending the answer also in real-time to the **_user_**.
 
 ## The backend
 
@@ -33,11 +33,12 @@ The REST API was tested using [**_Insomnia_**](https://insomnia.rest/) and I als
 
 3. Install NPM packages
 
-   npm install
+       npm install
 
 4. Run the application
 
-   npm run dev
+       npm run dev
+       
 
    here goes the package.json / terminal image
 

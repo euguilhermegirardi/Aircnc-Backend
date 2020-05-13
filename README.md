@@ -37,11 +37,11 @@ The REST API was tested using [**_Insomnia_**](https://insomnia.rest/) and I als
 
 3. Install NPM packages
 
-   npm install
+       npm install
 
 4. Run the application
 
-   npm run dev
+       npm run dev
 
 **package.json/server-running**
 ![server.js](src/assets/packagejson.png)

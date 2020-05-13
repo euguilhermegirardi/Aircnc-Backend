@@ -21,7 +21,7 @@ routes.post('/spots/:spot_id/bookings', BookingController.store);
 routes.post('/bookings/:booking_id/approvals', ApprovalController.store);
 routes.post('/bookings/:booking_id/declines', DeclineController.store);
 
-
+// REST API
 // GET: To search for an information from the backend
 // POST: To create a new info in the backend
 // PUT: To edit an information

@@ -24,3 +24,11 @@ module.exports = {
 // req.query = Access Query params (to filter)
 // req.params = Access rote params (to edit, delete)
 // req.body = Access the body of the req (to create, edit)
+
+// <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+// (req, res)
+// req = Request => Type of params that the user sends in the request.
+// Ex: req = Gets which product is in the basket, the price, all the info...
+
+// res = Response => Sends an answer back to the browser.
+// Ex: res.send('Hello World'); or res.send({ message: 'Hello World' }); or res.json(user);

@@ -11,6 +11,7 @@ const app = express();
 const server = http.Server(app); // extracting the server from the 'Express.js'
 const io = socketio(server);
 
+// Connect 'server.js' to the database (MongoDB Atlas).
 mongoose.connect('mongodb+srv://aircnc:aircnc@aircnc-1l5gs.mongodb.net/omnistack?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -33,11 +34,9 @@ app.use((req, res, next) => {
 
 
 app.use(cors());
-// Understand JSON requests.
-app.use(express.json());
-// Route that returns the img as URL.
-app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
-app.use(routes);
+app.use(express.json()); // Understand JSON requests.
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads'))); // Route that returns the img as URL.
+app.use(routes); // Run all the routes.
 //app.listen(3333);
 server.listen(3333); // The application now is able to listen http request and websocket request.
 
@@ -46,6 +45,10 @@ server.listen(3333); // The application now is able to listen http request and w
 
 
 // Express is a Node.Js framework that you can use for applications that are based on server/s that will "listen" for any input/connection requests from clients. When you use it in Node, it is just saying that you are requesting the use of the built-in Express file from your Node modules.
+
 // Insomnia is a tool that gives supports and test APIs.
+// by default the browsers only test the GET method, so Insomnia is essential to test the other ones.
+
 // MongoDB Atlas as the database (server).
+
 // mongoose is a tool (library) that facilitates the work with the MongoDB Atlas. It edit, delete some info in the server.

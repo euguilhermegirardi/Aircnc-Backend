@@ -3,6 +3,7 @@ const Spot = require('../models/Spot');
 
 module.exports = {
 
+  // Shows the spots that already exist PER TECHNOLOGY.
   // index method = Creates a method of session list.
   async index(req, res) {
     // req.query = To filter. Access Query params on Insomnia.
@@ -12,12 +13,11 @@ module.exports = {
     return res.json(spots);
   },
 
-
   // store method = To create a session.
   async store(req, res) {
-    const { filename } = req.file;
-    const { company, techs, price } = req.body;
-    const { user_id } = req.headers;
+    const { filename } = req.file; // 'thumbnail' by default.
+    const { company, techs, price } = req.body; // From 'Spot.js'.
+    const { user_id } = req.headers; // id by default.
 
     // Check if the user exist.
     const user = await User.findById(user_id);
@@ -31,6 +31,7 @@ module.exports = {
       user: user_id,
       thumbnail: filename,
       company,
+      // Transforming into an array.
       techs: techs.split(',').map(tech => tech.trim()),
       // 'techs' - The database wait it as an array, so, transform into an array, cos it is actually a string.
       // Split with commas and remove the space from the words.

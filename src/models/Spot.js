@@ -5,13 +5,14 @@ const SpotSchema = new mongoose.Schema({
   thumbnail: String,
   company: String,
   price: Number,
-  techs: [String], // more than one
+  techs: [String], // More than one.
+  // Which user saved all these information?
   user: {
     type: mongoose.Schema.Types.ObjectId, // ObjectId is the id from Insomnia ( "_id": "5eb1a0993a1d89d269df6d88")
-    ref: 'User'
+    ref: 'User' // Which 'model' does this information refers to?
   }
 }, {
-  // Everytime that a spot in converted into JSON it need to calculete the virtual automatically.
+  // Every time that a spot in converted into JSON it need to calculate the virtual automatically.
   // Doing that the frontend can use the image send by the user.
   toJSON: {
     virtuals: true,

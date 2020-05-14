@@ -1,12 +1,12 @@
 const User = require('../models/User');
 
 module.exports = {
-  // store = To create a session.
   async store(req, res) {
     const { email } = req.body;  // const email = req.body.email;
 
     // Creating an user.
     let user = await User.findOne({ email });
+
     if(!user) {
       user = await User.create({ email });
     }

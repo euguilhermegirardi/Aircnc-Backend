@@ -4,13 +4,15 @@ const SessionController = require('./controllers/SessionController');
 const SpotController = require('./controllers/SpotController');
 const DashboardController = require('./controllers/DashboardController');
 const BookingController = require('./controllers/BookingController');
+
 const multer = require('multer');
 const uploadConfig = require('./config/upload');
 const upload = multer(uploadConfig);
+
 const ApprovalController = require('./controllers/ApprovalController');
 const DeclineController = require('./controllers/DeclineController');
 
-
+// Methods like get, post, put and delete it's from Router() which is from 'express'.
 routes.post('/sessions', SessionController.store);
 routes.get('/spots', SpotController.index);
 routes.post('/spots', upload.single('thumbnail'), SpotController.store);
@@ -26,5 +28,7 @@ routes.post('/bookings/:booking_id/declines', DeclineController.store);
 // POST: To create a new info in the backend
 // PUT: To edit an information
 // DELETE: To delete.
+
+// 'multer' (library) handles 'multipart form data' which is the upload of img or files...
 
 module.exports = routes;

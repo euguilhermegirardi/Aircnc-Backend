@@ -1,5 +1,6 @@
 # Ignore node_modules folder
 node_modules
+yarn.lock
 
 # Ignore dist folder with all the minified files
 src/assets/*
